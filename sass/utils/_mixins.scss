@@ -1,0 +1,16 @@
+@font-face{
+	font-family: 'Roboto';
+	src: url('font/Roboto-Regular.ttf');}
+
+	@font-face{font-family: 'Shrikhand';
+    src: url('font/Shrikhand-Regular.ttf');
+    src: url('font/Shrikhand-Regular.otf');
+}
+
+@mixin titlefont {
+    font-family: 'Shrikhand';
+}
+
+@mixin font {
+    font-family: 'Roboto';
+}
