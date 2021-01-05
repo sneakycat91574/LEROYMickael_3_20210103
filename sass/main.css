@@ -1,11 +1,89 @@
-@font-face {
-  font-family: 'Roboto';
-  src: url("font/Roboto-Regular.ttf");
+body {
+  list-style-type: none;
+  margin: 0rem 0px;
 }
 
-@font-face {
-  font-family: 'Shrikhand';
-  src: url("font/Shrikhand-Regular.ttf");
-  src: url("font/Shrikhand-Regular.otf");
+a {
+  text-decoration: none;
+}
+
+.fa, .fas, .far {
+  padding-right: 1rem;
+}
+
+.headbar {
+  text-align: center;
+  width: 100%;
+  font-family: "Shrikhand";
+}
+
+.locate {
+  text-align: center;
+  font-family: "Roboto";
+  background-color: #f2f2f2dc;
+  padding: 1.2rem;
+}
+
+.logomaps {
+  text-align: center;
+  font-family: "Roboto";
+  width: 30%;
+}
+
+.entete {
+  text-align: center;
+  font-family: "Roboto";
+  background-color: #f2f2f2dc;
+  margin: 0rem 0px;
+}
+
+.fonctionnement {
+  text-align: center;
+  font-family: "Roboto";
+}
+
+.restaurant__bloc {
+  text-align: center;
+  font-family: "Roboto";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #f2f2f2dc;
+}
+
+.footer__bloc {
+  padding: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  background-color: #2b2924;
+  color: #fff;
+}
+
+.footer__bloc .__contain {
+  margin-bottom: 0rem 0px;
+}
+
+.footer__bloc .__contain .__element {
+  color: #fff;
 }
 /*# sourceMappingURL=main.css.map */

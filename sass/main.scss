@@ -1,2 +1,64 @@
 @import "./utils/variables";
 @import "./utils/mixins";
+
+
+body{
+    list-style-type: none;
+    margin: $margin;
+}
+
+a{
+    text-decoration: none;
+}
+
+.fa,.fas,.far{
+    padding-right: 1rem;
+}
+
+.headbar{
+    @include headerbox;
+}
+
+.locate{
+    @include boxcenter;
+    @include stylebckgrd;
+    padding:1.2rem;
+}
+
+.logomaps{
+    @include boxcenter;
+    width: 30%;
+}
+
+.entete{
+    @include boxcenter;
+    @include stylebckgrd;
+    margin: $margin;
+}
+
+.fonctionnement{
+    @include boxcenter;
+}
+
+.restaurant__bloc{
+    @include boxcenter;
+    @include flex-row;
+    @include stylebckgrd;
+}
+
+.footer__bloc{
+    padding:1.2rem;
+    @include flex-footer;
+        .__contain{
+            margin-bottom: $margin;
+                .__element{
+                    color: $color-base;
+                }
+        }
+    }
+
+
+
+
+
+

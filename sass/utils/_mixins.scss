@@ -1,16 +1,41 @@
-@font-face{
-	font-family: 'Roboto';
-	src: url('font/Roboto-Regular.ttf');}
-
-	@font-face{font-family: 'Shrikhand';
-    src: url('font/Shrikhand-Regular.ttf');
-    src: url('font/Shrikhand-Regular.otf');
-}
-
-@mixin titlefont {
-    font-family: 'Shrikhand';
-}
-
-@mixin font {
+@mixin body-font {
     font-family: 'Roboto';
+    src: url(../../font/roboto/Roboto-Regular.ttf);
+}
+
+@mixin title-font {
+    font-family: 'Shrikhand';
+    src: url(../../font/shrikhand/Shrikhand-Regular.ttf);
+}
+
+@mixin headerbox {
+    text-align: center;
+    width: 100%;
+    font-family: $head-font;
+}
+
+@mixin boxcenter {
+    text-align: center;
+    font-family: $body-font;
+}
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: rgb(43, 41, 36);
+    color: $color-base;
+    
+}
+@mixin stylebckgrd {
+    background-color: $back-grnd;
+    
 }

@@ -4,8 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="https://kit.fontawesome.com/f43d0a209c.js" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="public/css/menu.css">
-	<link rel="stylesheet" href="public/css/style.css">
+	<link rel="stylesheet" href="sass/main.css">
 	<title>Oh My Food</title>
 </head>
 
@@ -18,8 +17,9 @@
 	<div class="locate">
 		<a class="logomaps" href="#">
 			<i class="fas fa-map-marker-alt maps"></i>
-		</a>
+		
 			Paris, Belleville
+		</a>
 	</div>
 
 	<div class="entete">
@@ -60,7 +60,7 @@
 		
 		<div class="restaurant">
 			<h3>Restaurants</h3>
-			
+			<div class="restaurant__bloc">
 			<div class="restaurant__menu">
 				<a href="menu/menu_lapalettedugout.html">
 					<img src="img/menus/menu-1b.png" alt="Carte du restaurant la palette du goût">
@@ -133,17 +133,25 @@
 				</a>
 			</div>
 		</div>
-
+		</div>
 	</section>
 
-	<footer class="blocfooter">
+	<footer class="footer__bloc">
 
 		<h3>ohmyfood</h3>
 
-			<p class="footer_contain"><a href="#"><i class="fas fa-utensils"></i>Proposer un restaurant</a></p>
-			<p class="footer_contain"><a href="#"><i class="fas fa-hands-helping"></i>Devenir partenaire</a></p>
-			<p class="footer_contain"><a href="#">Mentions légales</a></p>
-			<p class="footer_contain"><a href="mailto:adress@gmail">Contactez-nous</a></p>
+			<p class="footer__contain">
+				<a class="footer__contain__element" href="#">
+					<i class="fas fa-utensils"></i>
+					Proposer un restaurant
+				</a>
+			</p>
+			<p class="footer__contain">
+				<a class="footer__contain__element" href="#"><i class="fas fa-hands-helping"></i>Devenir partenaire</a></p>
+			<p class="footer__contain">
+				<a class="footer__contain__element" href="#">Mentions légales</a></p>
+			<p class="footer__contain">
+				<a class="footer__contain__element" href="mailto:adress@gmail">Contactez-nous</a></p>
 		
 		</footer>
 
