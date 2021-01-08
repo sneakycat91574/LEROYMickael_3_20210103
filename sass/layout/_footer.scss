@@ -1,0 +1,14 @@
+.footer__bloc{
+    padding:1rem;
+    color:$color;
+    @include flex-footer;   
+        .headfoot{ 
+            letter-spacing: 1px;
+        }
+        .footer__contain{
+            margin-bottom: $margin;
+                .footer__contain__element{
+                    color: $color;
+                }
+        }
+    }

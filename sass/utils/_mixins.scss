@@ -1,22 +1,19 @@
-@mixin body-font {
-    font-family: 'Roboto';
-    src: url(../../font/roboto/Roboto-Regular.ttf);
-}
-
-@mixin title-font {
-    font-family: 'Shrikhand';
-    src: url(../../font/shrikhand/Shrikhand-Regular.ttf);
-}
 
 @mixin headerbox {
+
     text-align: center;
     width: 100%;
-    font-family: $head-font;
 }
 
 @mixin boxcenter {
     text-align: center;
-    font-family: $body-font;
+}
+
+@mixin flex-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 @mixin flex-row {
@@ -32,10 +29,21 @@
     flex-direction: column;
     justify-content: flex-start;
     background-color: rgb(43, 41, 36);
-    color: $color-base;
     
 }
 @mixin stylebckgrd {
     background-color: $back-grnd;
-    
 }
+
+@mixin cardrestaurant {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    width: 330px;
+    height: 250px;
+    margin: 20px;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+

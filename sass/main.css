@@ -1,6 +1,86 @@
+.fa, .fas, .far {
+  padding-right: 1rem;
+}
+
+.headbar, .headfoot {
+  font-family: 'Shrikhand';
+}
+
+.locate, .entete, .fonctionnement, .restaurant, .footer__contain {
+  font-family: 'Roboto';
+}
+
+.btn_big {
+  text-align: center;
+  text-align: center;
+  border-radius: 30px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#db98d8));
+  background: linear-gradient(0deg, #9356DC, #db98d8);
+  padding: 1rem;
+  color: #fff;
+  width: 180px;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  -webkit-transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.btn_big:hover {
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25), 0 5px 7px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25), 0 5px 7px rgba(0, 0, 0, 0.23);
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+}
+
+.fa-heart:hover {
+  background-color: #9356DC;
+  -webkit-transition: ease-in .1s;
+  transition: ease-in .1s;
+}
+
+.footer__bloc {
+  padding: 1rem;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  background-color: #2b2924;
+}
+
+.footer__bloc .headfoot {
+  letter-spacing: 1px;
+}
+
+.footer__bloc .footer__contain {
+  margin-bottom: 0rem;
+}
+
+.footer__bloc .footer__contain .footer__contain__element {
+  color: #fff;
+}
+
+@font-face {
+  font-family: 'Shrikhand';
+  src: url(../font/shrikhand/Shrikhand-Regular.otf);
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url(../font/roboto/Roboto-Regular.ttf);
+}
+
 body {
   list-style-type: none;
-  margin: 0rem 0px;
+  margin: 0rem;
 }
 
 a {
@@ -11,40 +91,102 @@ a {
   padding-right: 1rem;
 }
 
+img {
+  width: 330px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+figcaption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .headbar {
   text-align: center;
   width: 100%;
-  font-family: "Shrikhand";
+  padding: 0.5rem;
+}
+
+.headbar__logo {
+  color: black;
+  margin: 0rem;
 }
 
 .locate {
   text-align: center;
-  font-family: "Roboto";
-  background-color: #f2f2f2dc;
+  background-color: #dddd;
   padding: 1.2rem;
+  font-family: 'Roboto';
+  -webkit-box-shadow: inset 0px 5px 12px -10px;
+          box-shadow: inset 0px 5px 12px -10px;
 }
 
 .logomaps {
   text-align: center;
-  font-family: "Roboto";
   width: 30%;
 }
 
 .entete {
   text-align: center;
-  font-family: "Roboto";
   background-color: #f2f2f2dc;
-  margin: 0rem 0px;
+  margin: 0rem;
+  padding: 1.5rem;
+}
+
+.entete .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .fonctionnement {
+  width: 100%;
   text-align: center;
-  font-family: "Roboto";
+  padding: 1.5rem 0rem 1.5rem 0rem;
+  margin-bottom: 1.5rem;
 }
 
-.restaurant__bloc {
+.fonctionnement .fonctionnement__bloc {
+  border-radius: 15px;
+  background-color: #f2f2f2dc;
+  width: 330px;
   text-align: center;
-  font-family: "Roboto";
+  margin: auto;
+}
+
+.fonctionnement .fonctionnement__bloc .icon-number {
+  border: solid 1px #9356DC;
+  border-radius: 25px;
+  color: #fff;
+  background-color: #9356DC;
+  position: relative;
+  right: 6rem;
+  top: 2rem;
+  width: 1rem;
+}
+
+.restaurant {
+  background-color: #f2f2f2dc;
+  padding: 1.5rem;
+}
+
+.restaurant .restaurant__bloc {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -60,11 +202,9 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #f2f2f2dc;
 }
 
-.footer__bloc {
-  padding: 1.2rem;
+.restaurant .restaurant__bloc .restaurant__menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -72,18 +212,45 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  background-color: #2b2924;
-  color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  width: 330px;
+  height: 250px;
+  margin: 20px;
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-.footer__bloc .__contain {
-  margin-bottom: 0rem 0px;
+.restaurant .restaurant__bloc .restaurant__menu:hover {
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
 }
 
-.footer__bloc .__contain .__element {
-  color: #fff;
+.restaurant .restaurant__bloc .restaurant__menu .new {
+  background-color: #99E2D0;
+  color: darkgreen;
+  width: 25%;
+}
+
+.restaurant .restaurant__bloc .restaurant__menu .new .restaurant__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.restaurant .restaurant__bloc .restaurant__menu .new .restaurant__description .fa-heart {
+  position: relative;
+  right: 1rem;
+  top: 3rem;
 }
 /*# sourceMappingURL=main.css.map */

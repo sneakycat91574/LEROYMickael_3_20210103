@@ -1,6 +1,18 @@
 @import "./utils/variables";
 @import "./utils/mixins";
+@import "./base/base";
+@import "./components/_composant";
+@import "./layout/footer";
+@import "./pages/menu";
 
+@font-face{
+    font-family:'Shrikhand';
+    src: url(../font/shrikhand/Shrikhand-Regular.otf);
+}
+
+@font-face{
+    font-family:'Roboto';
+    src: url(../font/roboto/Roboto-Regular.ttf);}
 
 body{
     list-style-type: none;
@@ -15,14 +27,32 @@ a{
     padding-right: 1rem;
 }
 
+img{
+    width: 330px;
+    height: 200px;
+    object-fit: cover;
+}
+
+figcaption{
+    display: flex;
+    justify-content: space-between;
+}
+
 .headbar{
     @include headerbox;
+    padding:0.5rem;
+        &__logo{
+            color: $clr;
+            margin:$margin;
+        }
 }
 
 .locate{
     @include boxcenter;
-    @include stylebckgrd;
+    background-color: $locate-color;
     padding:1.2rem;
+    font-family: 'Roboto';
+    box-shadow: inset 0px 5px 12px -10px;
 }
 
 .logomaps{
@@ -34,31 +64,63 @@ a{
     @include boxcenter;
     @include stylebckgrd;
     margin: $margin;
+    padding :1.5rem;
+    .btn{ss
+        @include flex-col;
+    }
 }
 
 .fonctionnement{
+    width:100%;
     @include boxcenter;
-}
-
-.restaurant__bloc{
-    @include boxcenter;
-    @include flex-row;
-    @include stylebckgrd;
-}
-
-.footer__bloc{
-    padding:1.2rem;
-    @include flex-footer;
-        .__contain{
-            margin-bottom: $margin;
-                .__element{
-                    color: $color-base;
-                }
+    padding: 1.5rem 0rem 1.5rem 0rem;  
+    margin-bottom: 1.5rem;
+        .fonctionnement__bloc{
+           border-radius: 15px;
+           background-color: $back-grnd;
+           width: 330px;
+           @include boxcenter;
+           margin: auto;
+                    .icon-number{
+                        border: solid 1px $color-primary;
+                        border-radius: 25px;
+                        color: $color;
+                        background-color: $color-primary;
+                        position: relative;
+                        right:6rem;
+                        top:2rem;
+                        width: 1rem;
+                    }
         }
-    }
-
-
-
-
-
+}
+.restaurant{
+    @include stylebckgrd;
+    padding: 1.5rem;
+    .restaurant__bloc{
+        @include flex-row;
+            .restaurant__menu{
+                @include cardrestaurant;
+                &:hover{
+                    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+                    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+                    transform: scale(1.01);
+                }
+                .new{
+                    background-color:$color-tertiary;
+                    color: darkgreen;
+                    width: 25%;
+                        .restaurant__description{
+                            display: flex;
+                            flex-direction: row;
+                            
+                                .fa-heart{
+                                    position:relative;
+                                    right: 1rem;
+                                    top: 3rem;
+                                }
+                        }
+                }
+            }
+}
+}
 
