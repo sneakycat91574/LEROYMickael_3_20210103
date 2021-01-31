@@ -14,33 +14,10 @@
     font-family:'Roboto';
     src: url(../font/roboto/Roboto-Regular.ttf);}
 
-body{
-    list-style-type: none;
-    margin: $margin;
-}
-
-a{
-    text-decoration: none;
-}
-
-.fa,.fas,.far{
-    padding-right: 1rem;
-}
-
-img{
-    width: 330px;
-    height: 200px;
-    object-fit: cover;
-}
-
-figcaption{
-    display: flex;
-    justify-content: space-between;
-}
 
 .headbar{
     @include headerbox;
-    padding:0.5rem;
+    padding:0.5rem 0rem 0.5rem 0rem;
         &__logo{
             color: $clr;
             margin:$margin;
@@ -50,6 +27,7 @@ figcaption{
 .locate{
     @include boxcenter;
     background-color: $locate-color;
+    color: $clr;
     padding:1.2rem;
     font-family: 'Roboto';
     box-shadow: inset 0px 5px 12px -10px;
@@ -65,62 +43,163 @@ figcaption{
     @include stylebckgrd;
     margin: $margin;
     padding :1.5rem;
-    .btn{ss
+    .btn{
         @include flex-col;
     }
 }
 
-.fonctionnement{
+.fonctionnement{ 
     width:100%;
     @include boxcenter;
     padding: 1.5rem 0rem 1.5rem 0rem;  
     margin-bottom: 1.5rem;
+
         .fonctionnement__bloc{
-           border-radius: 15px;
-           background-color: $back-grnd;
-           width: 330px;
-           @include boxcenter;
            margin: auto;
+           @include flex-col;
+
                     .icon-number{
                         border: solid 1px $color-primary;
-                        border-radius: 25px;
+                        border-radius: 100%;
                         color: $color;
                         background-color: $color-primary;
                         position: relative;
-                        right:6rem;
-                        top:2rem;
-                        width: 1rem;
+                        right:10rem;
+                        top:4rem;
+                        padding: 0.1rem;
+                        width: 1rem;}
+                            
+                        .iconfonc{
+                                color: gray;
+                            }
+                            
+                            .fonctionnement__description{
+                                background-color: $back-grnd;
+                                border-radius: 20px;
+                                width: 250px;
+                                padding: 1.5rem 1.5rem 1.5rem 3rem;
+                                text-align: left;
+                                box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+                                transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+
+                                    &:hover{
+                                        box-shadow: 0 3px 6px rgba(0,0,0,0.25), 0 5px 7px rgba(0,0,0,0.23);
+                                        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+                                        background-color: $color-hoverfonc;
+
+                                        .iconfonc{
+                                            color:$color-primary;
+                                        }
+                                        
+                                    }
+
+                                        
+
+                        }
                     }
-        }
-}
+                }
+                        
+
 .restaurant{
     @include stylebckgrd;
     padding: 1.5rem;
+    
     .restaurant__bloc{
         @include flex-row;
-            .restaurant__menu{
-                @include cardrestaurant;
-                &:hover{
-                    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-                    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-                    transform: scale(1.01);
-                }
-                .new{
-                    background-color:$color-tertiary;
-                    color: darkgreen;
-                    width: 25%;
-                        .restaurant__description{
-                            display: flex;
-                            flex-direction: row;
-                            
-                                .fa-heart{
-                                    position:relative;
-                                    right: 1rem;
-                                    top: 3rem;
-                                }
-                        }
+            
+        .restaurant__menu{    
+            
+            @include cardrestaurant;
+
                 }
             }
-}
-}
 
+                    
+                .new{
+                       @include sticker-new;}
+                    
+                        
+                        .restaurant__description{
+                           display: flex;
+                           flex-direction: row;
+                           justify-content: space-between;
+                        }
+                        
+                        
+                        .restaurant__description__new{
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            position: relative;
+                            bottom: 2rem;
+
+                        
+                         
+                            
+                            .restaurant__card{
+                                display: flex;
+                                flex-direction: column;
+                                margin-left: 10px;
+                                
+                                        .heavy{
+                                            font-weight:600;
+                                            margin: 15px 0px 5px 0px;
+                                        }
+
+                                        .skinny{
+                                            font-weight: 200;
+                                            margin: 0px 0px 5px 0px;
+                                            font-size: 1rem;
+                                        }
+                                    }
+                                }
+                            }
+                            
+                            .fill-heart{
+                                background-color: green;
+                                font-size: 1.5rem;
+                                width: 25px;
+                                height: 25px;
+                                border-radius: 30px;;
+                                position: relative;
+                                top:25px;
+                                right: 25px;
+
+                                .full{
+                                    font-size: 1.22rem;
+                                    color:red;
+                                    position: relative;
+                                    left: 5px;
+                                    bottom: ;
+                                    transition: 200ms ease-in-out;
+                               
+                                &:hover{
+                                    transform: scale(1);
+
+                                    .full{
+                                        color: $color-primary;
+                                        transition: transform 200ms ease-in-out;
+                                        }
+
+                                
+                                
+                                .empt{
+                                    position: relative;
+                                    top: 20px;
+                                    right: 5px; 
+
+                                   
+                                    }
+                                 }
+
+                                }   
+                         }
+                                
+                                        
+                                        
+                                    
+
+                                            
+                                        
+                                    
+                            

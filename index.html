@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="https://kit.fontawesome.com/f43d0a209c.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="sass/main.css">
-	<title>Oh My Food</title>
+	<title>ohmyfood</title>
 </head>
 
 <body>
@@ -25,7 +25,7 @@
 	<div class="entete">
 		<h3 class="entete__title">Reservez le menu de votre choix</h3>
 		<p class="entete__description">Découvrez des restaurants d'exceptions, sélectionnés par nos soins</p>
-		<a class="btn" href="#"><p class="button-big">Explorer nos restaurants</p></a>
+		<a class="btn" href="#"><p class="big">Explorer nos restaurants</p></a>
 	</div>
 	
 	<section>
@@ -37,19 +37,28 @@
 			<div class="fonctionnement__bloc">
 				<div class="icon-number">1</div>
 
-				<p class="fonctionnement__description"><i class="fas fa-mobile-alt"></i>Choisissez un restaurant</p>
+				<p class="fonctionnement__description">
+					<i class="fas fa-mobile-alt iconfonc"></i>
+					Choisissez un restaurant
+				</p>
 			</div>
 
 			<div class="fonctionnement__bloc">
 				<div class="icon-number">2</div>
 
-				<p class="fonctionnement__description"><i class="fas fa-list-ul"></i>Composez votre menu</p>
+				<p class="fonctionnement__description">
+					<i class="fas fa-list-ul iconfonc"></i>
+					Composez votre menu
+				</p>
 			</div>
 
 			<div class="fonctionnement__bloc">
 				<div class="icon-number">3</div>
 
-				<p class="fonctionnement__description"><i class="fas fa-store i--one"></i>Dégustez au restaurant</p>
+				<p class="fonctionnement__description">
+					<i class="fas fa-store i--one iconfonc"></i>
+					Dégustez au restaurant
+				</p>
 			</div>
 	
 		</div>
@@ -59,80 +68,137 @@
 	<section>
 		
 		<div class="restaurant">
+			
 			<h3>Restaurants</h3>
+			
 			<div class="restaurant__bloc">
-			<figure class="restaurant__menu">
-				<a href="menu/menu_lapalettedugout.html">
+			
+				
+			<a href="menu/menu_lapalettedugout.html">
+				
+				<figure class="restaurant__menu">
+					
 					<img src="public/css/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Carte du restaurant la palette du goût">
+					
 					<p class="new">Nouveau</p>
-					<figcaption class="restaurant__description">    
-                        <div class="restaurant__card" >
-							<p><strong>La palette du goût</strong>
-							<br />
-							<span class="skinny">Ménilmontant</span>
-							</p>
-						</div>  
-						<i class="far fa-heart"></i>
-					</figcaption>
-				</a>
-			</figure>
+					
+						<figcaption class="restaurant__description__new">    
+							
+							<div class="restaurant__card">
+								
+								<p class="heavy">La palette du goût</p>
+
+								<p class="skinny">Ménilmontant</p>
+							
+							</div>
+							
+							<div class="heartfill">
+  
+								<i class="far fa-heart empt"></i>
+							  
+								<div class="heartpiece">
+								  
+								  <div class="piece1">-
+								  </div>
+								
+								  <div class="piece2">-
+								  </div>
+							   
+								</div>
+								
+							  </div>
+								
+
+						
+						</figcaption>
+				
+				</figure>
+			
+			</a>
+			
 		
-			<figure class="restaurant__menu">
+			
 				<a href="menu/menu_lanoteenchantee.html">
+				
+					<figure class="restaurant__menu">
+					
 					<img src="public/css/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Carte du restaurant la note enchantée">
+					
 					<p class="new">Nouveau</p>
-					<figcaption class="restaurant__description">    
-                                
-						<p class="restaurant__card">
-							<strong>La note enchantée</strong>
-							<br />
-							<span class="skinny">Charonne</span>
-							<br />
-						</p>
-
-						<i class="far fa-heart"></i>
 						
-					</figcaption>
+						<figcaption class="restaurant__description__new">    
+								
+								<div class="restaurant__card">
+									
+									<p class="heavy">La note enchantée</p>
+									
+									<p class="skinny">Charonne</p>
+								
+								</div>
+									
+								<div class="fill-heart">
+									
+									<i class="fas fa-heart full"></i>
+									<i class="far fa-heart empt"></i>
+								</div>
+						
+						</figcaption>
+					
+					</figure>
 				</a>
-			</figure>
+		
 			
 			
-			<figure class="restaurant__menu">
 				<a href="menu/menu_alafrancaise.html">
-					<img src="public/css/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Carte du restaurant à la française">
-					<figcaption class="restaurant__description">    
-                                
-						<p class="restaurant__card">
-							<strong>À la française</strong>
-							<br />
-							<span class="skinny">Cité Rouge</span>
-							<br />
-						</p>
+					<figure class="restaurant__menu">
+						<img src="public/css/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Carte du restaurant à la française">
+							
+						<figcaption class="restaurant__description">    
+									
+								<div class="restaurant__card">
+									
+									<p class="heavy">À la française</p>
+								
+									<p class="skinny">Cité Rouge</p>
+								</div>
+								
+								<i class="far fa-heart empt"></i>
 
-						<i class="far fa-heart"></i>
-						
-					</figcaption>
+								<i class="fas fa-heart full"></i>
+							
+							</figcaption>
+					
+					</figure>
+				
 				</a>
-			</figure>
 			
-			<figure class="restaurant__menu">
-				<a href="menu/menu_ledelicedessens.html">
+			<a href="menu/menu_ledelicedessens.html">
+				
+				<figure class="restaurant__menu">
+					
 					<img src="public/css/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Carte du restaurant le délices des sens">
-				    <figcaption class="restaurant__description">     
-					<p class="restaurant__card">
-						<strong>Le délice des sens</strong>
-						<br />
-						<span class="skinny">Folie Méricourt</span>
-						<br />
-					</p>
+						
+						<figcaption class="restaurant__description">     
+							
+							<div class="restaurant__card">
+								
+								<p class="heavy">Le délice des sens</p>
+								
+								<p class="skinny">Folie Méricourt</p>
+									
+							</div>	
+								
+							<i class="far fa-heart empt"></i>
+							<i class="fas fa-heart full"></i>
+							
+						</figcaption> 
 
-					<i class="far fa-heart"></i>
-					</figcaption class="restaurant__description"> 
-				</a>
-			</figure>
+				</figure>
+			</a>
+			
 		</div>
-		</div>
-	</section>
+	</div>
+</section>
 
 	<footer class="footer__bloc">
 

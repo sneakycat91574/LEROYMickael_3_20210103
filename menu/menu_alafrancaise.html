@@ -4,135 +4,168 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="https://kit.fontawesome.com/f43d0a209c.js" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="public/css/menu.css">
-	<link rel="stylesheet" href="public/css/style.css">
-	<title>Oh My Food - À la française</title>
+	<link rel="stylesheet" href="../sass/main.css">
+	<title>ohmyfood - À la française</title>
 	
 </head>
 
 <body>
-	<header class="headbar">
+	<header class="header__bar">
+		
 		<div class="headbar__direction">
-			<a href="index.html"><i class="fas fa-arrow-left"></i></a>
-			<a href="#"><h1 class="headbar__logo">ohmyfood</h1></a>
+			
+			<div class="large">
+                <a href ="../index.html">
+				
+						<i class="fas fa-arrow-left"></i>
+				</a>
+			</div>
+			
+			<div class="largelogo">
+				<a href="#">
+					<h1 class="head__logo">ohmyfood</h1>
+				</a>
+			</div>		
+		
 		</div>
 	
-		<div class="headbar__img">
+	</header>
+	
+	<section class="banner">
+		<div class="banner__img">
 			<img src="../public/css/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="assiette bistronomique">
 		</div>
-	</header>
-
-	<section class="menu menu--alafrancaise">
-		<header class="menu__header">
-			<h2 class="menu__header__title">À la française</h2>
-			<i class="far fa-heart"></i>
-		</header>
-
-		<article class="menu__starter">
-				<h4 class="menu__titlebloc">
-					Entrées
-				</h4>
-				<div class="under-line"></div>
-			</div>
-
-			<div class="bloc__description__menu">
-			<p class="description--menu">
-				Tartare de poulpe accidulé <br /><span>Aux zestes d'orange</span></p>
-				<p class="price--menu">25€</p>
-			</div>
-			
-			
-			<div class="bloc__description__menu">
-				<p class="description--menu">
-					Velouté de légumes d'antan <br /><span>Carotte, panais, topinambour</span></p>
-					<p class="price--menu">35€</p>
-				</div>
-			
-				<div class="bloc__description__menu">
-					<p class="description--menu">
-						Soupe à l'oignon <br /><span>Revistée</span></p>
-						<p class="price--menu">20€</p>
-					</div>
-
-		</article>
-
-		<article class="menu__maindishes">
-
-			<div class="menu__titlebloc">
-				<h4 class="menu-description-title">
-					Plats
-				</h4>
-				<div class="under-line"></div>
-			</div>
-				
-			<div class="bloc__description__menu">
-				<p class="description--menu">
-					Coquilles Saint-Jacques <br /><span>Accompagnées d'une purée de panais</span></p>
-					<p class="price--menu">40€</p>
-				</div>
-			
-				<div class="bloc__description__menu">
-					<p class="description--menu">
-						Magret de canard <br /><span>Et parmentier de pommes de terre</span></p>
-						<p class="price--menu">40€</p>
-					</div>
-
-					<div class="bloc__description__menu">
-						<p class="description--menu">
-							Pigeonneau d'Ille et Vilaine <br /><span>Sur son lit de gnocchis aux légumes</span></p>
-							<p class="price--menu">44€</p>
-						</div>
-		
-		</article>
-
-		<article class="menu__dessert">
-			<div class="menu__titlebloc">
-				
-				<h4 class="menu-description-title">
-					Desserts
-				</h4>
-				<div class="under-line"></div>
-			</div>
-
-			<div class="bloc__description__menu">
-				<p class="description--menu">
-					Pétales de violettes glacés <br /><span>Et purée de noisettes</span></p>
-					<p class="price--menu">18€</p>
-				</div>
-
-				<div class="bloc__description__menu">
-					<p class="description--menu">
-						Fondant au chocolat <br /><span>Revisté</span></p>
-						<p class="price--menu">22€</p>
-					</div>
-
-					<div class="bloc__description__menu">
-						<p class="description--menu">
-							Millefeuille croustillant <br /><span>Myrtilles et pâte d’amande</span></p>
-							<p class="price--menu">23€</p>
-						</div>
-
-		
-					</article>
-
-					<div class="menu__button">
-						<a class="button-big" href="#">Commander</a>
-					</div>
 	</section>
 
-	
+	<section class="menu__tabs">
+		<header class="menu__header">
+			<h2 class="menu__header__title">À la française</h2>
+			<i class="far fa-heart love"></i>
+		</header>
 
-	<footer class="blocfooter">
+<div class="bloc__menu">
+    <article class="menu__dish">
+        <h4 class="menu__titlebloc">
+            ENTRÉES
+        </h4>
 
-		<h3>ohmyfood</h3>
+    <div class="bloc__description__menu">
+        <div class="description--menu">
+            <p class="bold">Tartare de poulpe acidulé</p>
+            <p class="light">Aux zestes d'orange</p>
+        </div>	
+            <p class="price--menu">25€</p>
+    </div>
+        
+    <div class="bloc__description__menu">
+        <div class="description--menu">
+            <p class="bold">Velouté de légumes d'antan</p>
+            <p class="light">Carotte, panais, topinambour</p>
+        </div>
+            <p class="price--menu">35€</p>
+    </div>
+    
+    <div class="bloc__description__menu">
+        <div class="description--menu">	
+            <p class="bold">Soupe à l'oignon</p>
+            <p class="light">Revisité</p>
+        </div>	
+            <p class="price--menu">20€</p>
+    </div>
 
-			<p class="footer_contain"><a href="#"><i class="fas fa-utensils"></i>Proposer un restaurant</a></p>
-			<p class="footer_contain"><a href="#"><i class="fas fa-hands-helping"></i>Devenir partenaire</a></p>
-			<p class="footer_contain"><a href="#">Mentions légales</a></p>
-			<p class="footer_contain"><a href="mailto:adress@gmail">Contactez-nous</a></p>
+    </article>
+
+    <article class="menu__dish">
+
+            <h4 class="menu__titlebloc">
+                PLATS
+            </h4>
+
+        <div class="bloc__description__menu">
+            <div class="description--menu">
+                <p class="bold">Coquilles Saint-Jacques</p>
+                <p class="light">Accompagnées d'une purée de panais</p>
+            </div>	
+                <p class="price--menu">40€</p>
+        </div>
+        
+        <div class="bloc__description__menu">
+            <div class="description--menu">	
+                <p class="bold">Magret de canard</p>
+                <p class="light">Et parmentier de pomme de terre</p>
+            </div>
+                <p class="price--menu">35€</p>
+        </div>
+        
+            <div class="bloc__description__menu">
+                <div class="description--menu">	
+                    <p class="bold">Pigeonneau d'Ille et Vilaine</p>
+                    <p class="light">Sur son lit de gnocchis aux légumes</p>
+                </div>
+                    <p class="price--menu">44€</p>
+            </div>
+    
+    </article>
+    
+    <article class="menu__dish">
+            <h4 class="menu__titlebloc">
+                DESSERTS
+            </h4>
+        
+        <div class="bloc__description__menu">
+            <div class="description--menu">
+                <p class="bold">Pétales de violettes glacés</p> 
+                <p class="light">Et sa purée de noisettes</p>
+            </div>	
+                <p class="price--menu">18€</p>
+        </div>
+        
+        <div class="bloc__description__menu">
+            <div class="description--menu">
+                <p class="bold">Fondant au chocolat</p>
+                <p class="light">Revisité</p>
+            </div>	
+                <p class="price--menu">22€</p>
+        </div>
+        
+                <div class="bloc__description__menu">
+                    <div class="description--menu">
+                        <p class="bold">Millefeuille croustillant</p>
+                        <p class="light">Myrtilles et pâte d'amande</p>
+                    </div>	
+                        <p class="price--menu">23€</p>
+                </div>		
+                        
+    </article>
+    </div>
+
+    
+		<div class="menu__button">
+			<a class="btn" href="#">
+				<p class="button">Commander</p>
+			</a>
+		</div>
+		
+	</section>
+
+	<footer class="footer__bloc">
+
+		<h4 class="headfoot">ohmyfood</h4>
+
+			<p class="footer__contain">
+				<a class="footer__contain__element" href="#">
+					<i class="fas fa-utensils"></i>
+					Proposer un restaurant
+				</a>
+			</p>
+			<p class="footer__contain">
+				<a class="footer__contain__element" href="#"><i class="fas fa-hands-helping"></i>Devenir partenaire</a></p>
+			<p class="footer__contain">
+				<a class="footer__contain__element" href="#">Mentions légales</a></p>
+			<p class="footer__contain">
+				<a class="footer__contain__element" href="mailto:adress@gmail">Contactez-nous</a></p>
 		
 		</footer>
-
 
 </body>
 </html>

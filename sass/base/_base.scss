@@ -2,10 +2,30 @@
     padding-right: 1rem;
 }
 
-.headbar, .headfoot{
+body{
+    list-style-type: none;
+    margin: $margin;
+}
+
+a{
+    text-decoration: none;
+}
+
+.fa,.fas,.far{
+    padding-right: 1rem;
+}
+
+img{
+    width: 330px;
+    height: 180px;
+    object-fit: cover;
+}
+
+.headbar, .headfoot, .header__bar, .menu__header__title{
     font-family: 'Shrikhand';
 }
 
-.locate, .entete, .fonctionnement, .restaurant, .footer__contain{
+.locate, .entete, .fonctionnement, .restaurant, .footer__contain, .button{
     font-family: 'Roboto';
+    font-size: 1rem;
 }
