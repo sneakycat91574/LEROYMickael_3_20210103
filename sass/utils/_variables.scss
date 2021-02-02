@@ -11,5 +11,9 @@ $color-hoverfonc:#e7b7e562;
 $size-text: 1.2rem;
 $margin: 0rem;
 
-$breakpoints: (laptop: 950px, tablet: 650px);
 
+$device-media-queries: (
+  mobile: '(max-width: 400px)',
+  tablet: '(min-width: 650px)',
+  desktop: '(min-width: 1025px)'
+);

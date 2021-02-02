@@ -27,7 +27,6 @@
 .locate{
     @include boxcenter;
     background-color: $locate-color;
-    color: $clr;
     padding:1.2rem;
     font-family: 'Roboto';
     box-shadow: inset 0px 5px 12px -10px;
@@ -114,7 +113,6 @@
                 }
             }
 
-                    
                 .new{
                        @include sticker-new;}
                     
@@ -123,6 +121,8 @@
                            display: flex;
                            flex-direction: row;
                            justify-content: space-between;
+                           position: relative;
+                           @include rest-card;
                         }
                         
                         
@@ -132,74 +132,41 @@
                             justify-content: space-between;
                             position: relative;
                             bottom: 2rem;
-
-                        
-                         
-                            
-                            .restaurant__card{
-                                display: flex;
-                                flex-direction: column;
-                                margin-left: 10px;
-                                
-                                        .heavy{
-                                            font-weight:600;
-                                            margin: 15px 0px 5px 0px;
-                                        }
-
-                                        .skinny{
-                                            font-weight: 200;
-                                            margin: 0px 0px 5px 0px;
-                                            font-size: 1rem;
-                                        }
-                                    }
-                                }
+                            @include rest-card;
                             }
-                            
-                            .fill-heart{
-                                background-color: green;
-                                font-size: 1.5rem;
-                                width: 25px;
-                                height: 25px;
-                                border-radius: 30px;;
-                                position: relative;
-                                top:25px;
-                                right: 25px;
+                       
 
-                                .full{
-                                    font-size: 1.22rem;
-                                    color:red;
-                                    position: relative;
-                                    left: 5px;
-                                    bottom: ;
-                                    transition: 200ms ease-in-out;
-                               
-                                &:hover{
+                            .fill-heart{
+                                display: flex;
+                                position: absolute;
+                                top: 25px;
+                                right: 20px;
+                                background-color:$color;
+                                height: 20px;
+                                width: 18px;
+                                border-radius: 15px;
+
+                                &:active{
                                     transform: scale(1);
 
                                     .full{
                                         color: $color-primary;
-                                        transition: transform 200ms ease-in-out;
-                                        }
+                                        transition: 200ms ease-in-out;
 
-                                
-                                
-                                .empt{
-                                    position: relative;
-                                    top: 20px;
-                                    right: 5px; 
-
-                                   
                                     }
+                                }
+                            }
+                               
+                                .empt{
+                                    font-size: 22px;
+                                    position: relative;
+                                    right: 38px;
+                                }
+                                    
+                                .full{
+                                        font-size: 20px;
+                                        position: relative;
+                                        right: 1px;
+                                        color: $color;
                                  }
-
-                                }   
-                         }
-                                
-                                        
-                                        
-                                    
-
-                                            
-                                        
-                                    
-                            
+                                }

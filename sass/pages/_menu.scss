@@ -83,7 +83,7 @@
     .menu__dish{
         margin:10px 10px 50px 0px;
         width: 90%;
-            @media (min-width: 650px){
+        @media #{map-get($device-media-queries, tablet)}{
                 width: 30%;
             }
     }
@@ -104,9 +104,14 @@
             border-radius: 15px;
             margin: 15px;
             overflow: hidden;
+            flex-wrap: nowrap;
             
             box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
             transition: all 0.3s;
+
+            @media #{map-get($device-media-queries, mobile)}{
+            height: 65px;
+            }
 
             &:hover{
                 box-shadow: 0 3px 6px rgba(0,0,0,0.25), 0 5px 7px rgba(0,0,0,0.23);
@@ -116,87 +121,113 @@
                 .slide-box{
                     transform: translate(-70px, 0);
                     transition: transform 200ms ease-in-out;
-                
+
+                    @media #{map-get($device-media-queries, mobile)}{
+                        transform: translate(-60px, 0);
+                    }
+
 
                  .box{    
-
-                    
                     background-color: $color-tertiary;   
                     transform: scale(1);           
                     transition: transform 200ms ease-in-out;
-                
-                    
+ 
                     .check{ 
-                        transform: scale(1.5);
+                        transform: scale(1.1);
                         color:$color;
-                        transform:rotate(360deg); 
+                        transform:rotate(720deg); 
                         transition: transform 100ms ease-in-out;                                  
-                    }
+                
                 }
             }
         }
-            
-            
-            @media (max-width: 375px){
-                font-size: 0.8rem;
-            }
+    }
+       
         
-            
-        
+ 
         .description--menu{
+            z-index: 1;
             display: flex;
             flex-direction: column;
-            width: 68%;
+            width: 100%;
             flex-wrap: nowrap;
-            
+            overflow: hidden;
+
+            @media #{map-get($device-media-queries, mobile)}{
+                width: 350%;
+            }
+
             .bold{
+                width: 100%;
+                flex-wrap: nowrap;
                 margin: 10px 0px 5px 10px;
                 font-weight: 600;
-                flex-wrap: nowrap;
                 font-size: 1.1rem;
+                @media #{map-get($device-media-queries, mobile)} { 
+                    font-size: 14px;
+                    margin-bottom: 0px;
+                }
             }
                
                 .light{
+                    width: 100%;
+                    flex-wrap: nowrap;
                     margin: 0px 0px 10px 10px;
                     margin-top: 0px;
                     margin-left: 10px;
                     font-size: 0.9rem;
                     font-weight: 200;
-                    flex-wrap: nowrap;
+
                 }
         }
-           
-            .slide-box{
+        
+        .slide-box{
                 display: flex;
                 justify-content: center;
                 align-content:center ;
                 position: relative;
-                left: 80px;
-                z-index: 1;
-                width: 32%;
+                left: 120px;
+                z-index: 2;
+                width: 100%;
                 transform: translateX(0);
                 transition: transform 300ms ease-in-out;
+                
+                @media #{map-get($device-media-queries, mobile)}{
+                    position: relative;
+                    left: 50px;
+
+                }
 
                 .price--menu{
-                    margin-right: 10px;
+                    z-index: 1;
+                    padding-top: 30px;
+                    padding-left: 5px;
+                    background-color: $color;
+                    margin-right: 16px;
                     justify-content: center;
+                    align-self: center;
                     position: relative;
-                    top: 20px;
+                    top:0;
                 }
             
                 .box{
                     display: flex;
                     position: initial;
-                    width: 100%;
+                    width: 40%;
                     justify-content: center;
                     align-items: center;
                     background-color:$color-tertiary;
                     transform: translateX(0);
                     transition: transform 300ms ease-in-out;
+                    @media #{map-get($device-media-queries, mobile)}{
+                        width: 40%;
+                    }
+                   
+                    }
                 
                 .check{
+                    align-self: center;
                     position: relative;
-                    bottom:23px;
                     left: 4px;
                     color: $color;
                     font-size:1.5rem;
@@ -206,7 +237,8 @@
                 }
              }
             }
-
+        }
+    
                 .menu__button{
                     @include flex-row;
                     text-align: center;
@@ -214,5 +246,5 @@
                     padding-bottom: 6rem;
                 }
 
-                        }
-                    }
+         
+     
