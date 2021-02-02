@@ -59,6 +59,40 @@
             margin-left: 20px;
         }
 
+        .heart__menu{
+            @media #{map-get($device-media-queries, mobile)}{
+            position: relative;
+            top: 10px;
+            left: 25px;
+            }
+
+            &:active{
+                transform: scale(1);
+
+                .full{
+                    color: $color-primary;
+                    transition: 200ms ease-in-out;
+
+                }
+            }
+        }
+           
+            .empt{
+                font-size: 22px;
+                position: relative;
+                right: 2px;
+                bottom: 22px;
+            }
+                
+            .full{
+                    font-size: 20px;
+                    position: relative;
+                    right: 1px;
+                    color: $color;
+             }
+            }
+        
+
         .love{
             width: 10%;
             font-size:1.2rem;
@@ -68,7 +102,6 @@
                 left: 3rem;;
             }
         }
-    }
             .bloc__menu{
                 width: 100%;
                 @include flex-col;
@@ -81,7 +114,7 @@
           
 
     .menu__dish{
-        margin:10px 10px 50px 0px;
+        margin:10px 20px 50px 0px;
         width: 90%;
         @media #{map-get($device-media-queries, tablet)}{
                 width: 30%;
@@ -110,7 +143,7 @@
             transition: all 0.3s;
 
             @media #{map-get($device-media-queries, mobile)}{
-            height: 65px;
+            height: 60px;
             }
 
             &:hover{
@@ -126,24 +159,39 @@
                         transform: translate(-60px, 0);
                     }
 
+                    .point{
+                        @media #{map-get($device-media-queries, mobile)}{
+                        display: inline-block;
+                        position: relative;
+                        top:27px;
+                        left: 5px;
+                        background-color: white;
+                        padding-right: 10px;
+                        padding-left: 3px;
+                        transform: scale(1);
+                        transition: 100ms ease-in;
+                        }
+                        
+                    }
 
-                 .box{    
-                    background-color: $color-tertiary;   
-                    transform: scale(1);           
-                    transition: transform 200ms ease-in-out;
+                    .box{    
+                        background-color: $color-tertiary;   
+                        transform: scale(1);           
+                        transition: transform 200ms ease-in-out;
  
                     .check{ 
                         transform: scale(1.1);
                         color:$color;
-                        transform:rotate(720deg); 
-                        transition: transform 100ms ease-in-out;                                  
+                        position: relative;
+                        opacity: 1;
+                        left: 8px;
+                        transform:rotate(360deg); 
+                        transition: transform 250ms ease-in-out;                                  
                 
                 }
             }
         }
-    }
-       
-        
+    }     
  
         .description--menu{
             z-index: 1;
@@ -151,7 +199,7 @@
             flex-direction: column;
             width: 100%;
             flex-wrap: nowrap;
-            overflow: hidden;
+            overflow: visible;
 
             @media #{map-get($device-media-queries, mobile)}{
                 width: 350%;
@@ -165,7 +213,8 @@
                 font-size: 1.1rem;
                 @media #{map-get($device-media-queries, mobile)} { 
                     font-size: 14px;
-                    margin-bottom: 0px;
+                    margin-bottom: 5px;
+                    width: 120%;
                 }
             }
                
@@ -178,66 +227,80 @@
                     font-size: 0.9rem;
                     font-weight: 200;
 
+                    @media #{map-get($device-media-queries, mobile)}{
+                        width: 150%;
+                    }
+
                 }
         }
         
-        .slide-box{
+            .slide-box{
                 display: flex;
                 justify-content: center;
                 align-content:center ;
                 position: relative;
                 left: 120px;
-                z-index: 2;
                 width: 100%;
                 transform: translateX(0);
                 transition: transform 300ms ease-in-out;
-                
+                z-index: 2;
                 @media #{map-get($device-media-queries, mobile)}{
                     position: relative;
-                    left: 50px;
+                    left: 60px;
 
                 }
 
+                    }
+                }
+               
                 .price--menu{
                     z-index: 1;
-                    padding-top: 30px;
-                    padding-left: 5px;
-                    background-color: $color;
-                    margin-right: 16px;
+                    padding: 20px 22px 0px 8px;                  
                     justify-content: center;
                     align-self: center;
                     position: relative;
                     top:0;
+                    background-color: $color;
+
+                    @media #{map-get($device-media-queries, mobile)}{
+                        font-size: 16px;
+                    }
                 }
-            
+
+                .point{
+                    display: none;
+                }
+
                 .box{
                     display: flex;
                     position: initial;
-                    width: 40%;
+                    width: 100%;
                     justify-content: center;
                     align-items: center;
                     background-color:$color-tertiary;
                     transform: translateX(0);
-                    transition: transform 300ms ease-in-out;
+                    transition: transform 500ms ease-in-out;
+                   
                     @media #{map-get($device-media-queries, mobile)}{
-                        width: 40%;
+                        width: 60px;
                     }
                    
                     }
                 
                 .check{
+                    justify-self: center;
                     align-self: center;
-                    position: relative;
-                    left: 4px;
                     color: $color;
                     font-size:1.5rem;
                     transform: scale(1);
+                    opacity: .5;
                     transform:rotate(0deg);
+                    transition: transform 500ms ease-in-out;
                 
                 }
              }
-            }
-        }
+            
+        
     
                 .menu__button{
                     @include flex-row;

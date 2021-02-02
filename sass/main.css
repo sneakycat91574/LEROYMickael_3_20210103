@@ -26,7 +26,7 @@ img {
   font-family: 'Shrikhand';
 }
 
-.locate, .entete, .fonctionnement, .restaurant, .footer__contain, .button {
+.locate, .entete, .fonctionnement, .restaurant, .footer__contain, .button, .bloc__menu {
   font-family: 'Roboto';
   font-size: 1rem;
 }
@@ -101,6 +101,15 @@ img {
 
 .footer__bloc .footer__contain {
   margin-bottom: 0rem;
+  opacity: 1;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+}
+
+.footer__bloc .footer__contain:hover {
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+  opacity: .7;
 }
 
 .footer__bloc .footer__contain .footer__contain__element {
@@ -193,14 +202,47 @@ img {
   margin-left: 20px;
 }
 
-.menu__tabs .menu__header .love {
+@media (max-width: 400px) {
+  .menu__tabs .menu__header .heart__menu {
+    position: relative;
+    top: 10px;
+    left: 25px;
+  }
+}
+
+.menu__tabs .menu__header .heart__menu:active {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.menu__tabs .menu__header .heart__menu:active .full {
+  color: #9356DC;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+.menu__tabs .menu__header .empt {
+  font-size: 22px;
+  position: relative;
+  right: 2px;
+  bottom: 22px;
+}
+
+.menu__tabs .menu__header .full {
+  font-size: 20px;
+  position: relative;
+  right: 1px;
+  color: #fff;
+}
+
+.menu__tabs .love {
   width: 10%;
   font-size: 1.2rem;
   text-align: center;
 }
 
 @media (min-width: 650px) {
-  .menu__tabs .menu__header .love {
+  .menu__tabs .love {
     position: relative;
     left: 3rem;
   }
@@ -246,7 +288,7 @@ img {
 }
 
 .menu__tabs .menu__dish {
-  margin: 10px 10px 50px 0px;
+  margin: 10px 20px 50px 0px;
   width: 90%;
 }
 
@@ -287,7 +329,7 @@ img {
 
 @media (max-width: 400px) {
   .menu__tabs .bloc__description__menu {
-    height: 65px;
+    height: 60px;
   }
 }
 
@@ -316,6 +358,22 @@ img {
   }
 }
 
+@media (max-width: 400px) {
+  .menu__tabs .bloc__description__menu:hover .slide-box .point {
+    display: inline-block;
+    position: relative;
+    top: 27px;
+    left: 5px;
+    background-color: white;
+    padding-right: 10px;
+    padding-left: 3px;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transition: 100ms ease-in;
+    transition: 100ms ease-in;
+  }
+}
+
 .menu__tabs .bloc__description__menu:hover .slide-box .box {
   background-color: #99E2D0;
   -webkit-transform: scale(1);
@@ -330,12 +388,15 @@ img {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   color: #fff;
-  -webkit-transform: rotate(720deg);
-          transform: rotate(720deg);
-  -webkit-transition: -webkit-transform 100ms ease-in-out;
-  transition: -webkit-transform 100ms ease-in-out;
-  transition: transform 100ms ease-in-out;
-  transition: transform 100ms ease-in-out, -webkit-transform 100ms ease-in-out;
+  position: relative;
+  opacity: 1;
+  left: 8px;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
 }
 
 .menu__tabs .bloc__description__menu .description--menu {
@@ -350,7 +411,7 @@ img {
   width: 100%;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  overflow: hidden;
+  overflow: visible;
 }
 
 @media (max-width: 400px) {
@@ -371,7 +432,8 @@ img {
 @media (max-width: 400px) {
   .menu__tabs .bloc__description__menu .description--menu .bold {
     font-size: 14px;
-    margin-bottom: 0px;
+    margin-bottom: 5px;
+    width: 120%;
   }
 }
 
@@ -386,6 +448,12 @@ img {
   font-weight: 200;
 }
 
+@media (max-width: 400px) {
+  .menu__tabs .bloc__description__menu .description--menu .light {
+    width: 150%;
+  }
+}
+
 .menu__tabs .bloc__description__menu .slide-box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -397,7 +465,6 @@ img {
       align-content: center;
   position: relative;
   left: 120px;
-  z-index: 2;
   width: 100%;
   -webkit-transform: translateX(0);
           transform: translateX(0);
@@ -405,21 +472,19 @@ img {
   transition: -webkit-transform 300ms ease-in-out;
   transition: transform 300ms ease-in-out;
   transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
+  z-index: 2;
 }
 
 @media (max-width: 400px) {
   .menu__tabs .bloc__description__menu .slide-box {
     position: relative;
-    left: 50px;
+    left: 60px;
   }
 }
 
-.menu__tabs .bloc__description__menu .slide-box .price--menu {
+.menu__tabs .price--menu {
   z-index: 1;
-  padding-top: 30px;
-  padding-left: 5px;
-  background-color: #fff;
-  margin-right: 16px;
+  padding: 20px 22px 0px 8px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -428,14 +493,25 @@ img {
       align-self: center;
   position: relative;
   top: 0;
+  background-color: #fff;
 }
 
-.menu__tabs .bloc__description__menu .slide-box .box {
+@media (max-width: 400px) {
+  .menu__tabs .price--menu {
+    font-size: 16px;
+  }
+}
+
+.menu__tabs .point {
+  display: none;
+}
+
+.menu__tabs .box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: initial;
-  width: 40%;
+  width: 100%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -445,30 +521,35 @@ img {
   background-color: #99E2D0;
   -webkit-transform: translateX(0);
           transform: translateX(0);
-  -webkit-transition: -webkit-transform 300ms ease-in-out;
-  transition: -webkit-transform 300ms ease-in-out;
-  transition: transform 300ms ease-in-out;
-  transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
+  -webkit-transition: -webkit-transform 500ms ease-in-out;
+  transition: -webkit-transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
 }
 
 @media (max-width: 400px) {
-  .menu__tabs .bloc__description__menu .slide-box .box {
-    width: 40%;
+  .menu__tabs .box {
+    width: 60px;
   }
 }
 
-.menu__tabs .bloc__description__menu .slide-box .check {
+.menu__tabs .check {
+  -ms-grid-column-align: center;
+      justify-self: center;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  position: relative;
-  left: 4px;
   color: #fff;
   font-size: 1.5rem;
   -webkit-transform: scale(1);
           transform: scale(1);
+  opacity: .5;
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
+  -webkit-transition: -webkit-transform 500ms ease-in-out;
+  transition: -webkit-transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
 }
 
 .menu__button {
