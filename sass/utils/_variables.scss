@@ -11,9 +11,9 @@ $color-hoverfonc:#e7b7e562;
 $size-text: 1.2rem;
 $margin: 0rem;
 
-
 $device-media-queries: (
-  mobile: '(max-width: 400px)',
-  tablet: '(min-width: 650px)',
-  desktop: '(min-width: 1025px)'
-);
+  mini-mobile: '(max-width: 359px)',
+  mobile: '(min-width: 360px) and (max-width: 400px)',
+  big-mobile: '(min-width: 401px) and (max-width: 430px)',
+  tablet: '(min-width: 431px) and (max-width:850px)',
+  desktop: 'screen and (min-width: 851px)');
