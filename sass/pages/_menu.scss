@@ -87,6 +87,7 @@
 
             &:hover{
                 transform: scale(1);
+                cursor: pointer;
 
                 .full{
                     color: $color-primary;
@@ -136,6 +137,8 @@
     .menu__dish{
         margin:10px 20px 50px 0px;
         width: 90%;
+        animation: cascade 250ms cubic-bezier(.74,.02,.18,1.16);
+
 
         @media #{map-get($device-media-queries, desktop)}{
             width: 31%;
@@ -160,7 +163,6 @@
             overflow: hidden;
             flex-wrap: nowrap;
             cursor: pointer;
-            
             box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
             transition: all 0.3s;
 

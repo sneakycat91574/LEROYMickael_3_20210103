@@ -24,18 +24,31 @@ width: 200px;
         width: 150px;
     }
 
-  
-    @keyframes dis {
-      0% {
-        transform: translateY(0);
-      }
-      25% {
-        transform: translateY(0.5rem);
-      }
-      75% {
-        transform: translateY(-0.5rem);
-      }
-      100% {
-        transform: translateY(0);
-      }
+    .box1{
+      animation: cascade .5s;
     }
+
+    .box2{
+      animation: cascade .8s;
+    }
+
+    .box3{
+      animation: cascade 1s;
+    }
+
+    @keyframes cascade{
+      0% {translateY:(0,0);
+           opacity:0;
+           transform:scaleY(0);
+     }
+       50% {translateY:(50%,0);
+             opacity:.5;
+        transform: scaleY(0, 0.38);
+     }
+     
+       100% {translateY:(100%,0);
+             opacity:1;
+        transform: scaleY(0, 1);
+     }
+     }
+
