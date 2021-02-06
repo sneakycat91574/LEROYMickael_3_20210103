@@ -15,6 +15,11 @@
     src: url(../font/roboto/Roboto-Regular.ttf);}
 
 
+#body-opacity{
+    animation: backbody 3000ms linear;
+    z-index: 2;
+}
+
 .headbar{
     @include headerbox;
     padding:0.5rem 0rem 0.5rem 0rem;
