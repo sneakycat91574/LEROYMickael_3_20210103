@@ -92,43 +92,37 @@ img {
 
 @-webkit-keyframes cascade {
   0% {
-    translateY: 0, 0;
     opacity: 0;
     -webkit-transform: scaleY(0);
             transform: scaleY(0);
   }
   50% {
-    translateY: 50%, 0;
     opacity: .5;
-    -webkit-transform: scaleY(0, 0.38);
-            transform: scaleY(0, 0.38);
+    -webkit-transform: scaleY(0.38);
+            transform: scaleY(0.38);
   }
   100% {
-    translateY: 100%, 0;
     opacity: 1;
-    -webkit-transform: scaleY(0, 1);
-            transform: scaleY(0, 1);
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
   }
 }
 
 @keyframes cascade {
   0% {
-    translateY: 0, 0;
     opacity: 0;
     -webkit-transform: scaleY(0);
             transform: scaleY(0);
   }
   50% {
-    translateY: 50%, 0;
     opacity: .5;
-    -webkit-transform: scaleY(0, 0.38);
-            transform: scaleY(0, 0.38);
+    -webkit-transform: scaleY(0.38);
+            transform: scaleY(0.38);
   }
   100% {
-    translateY: 100%, 0;
     opacity: 1;
-    -webkit-transform: scaleY(0, 1);
-            transform: scaleY(0, 1);
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
   }
 }
 
